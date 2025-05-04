@@ -13,6 +13,9 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
+.theme-menu__button {
+  transition: transform 0.3s ease-out;
+}
 
 .theme-menu__button:disabled {
     opacity: 0.6;
@@ -32,7 +35,6 @@
   }
   
   .theme-menu__button:focus-visible::after {
-    transition: transform 0.3s ease-out;
     transform: scaleX(1);
   }
   
@@ -61,7 +63,6 @@
   .theme-menu__button:focus-visible {
     outline: none;
     opacity: 0.6;
-    transition: opacity 0.3s ease;
   }
   
   .card__icon-button:focus-visible {
@@ -71,11 +72,14 @@
     inline-size: 39px;
     block-size: 38px;
   }
+
+  .card__like-button {
+    transition: box-shadow 0.3s ease-out;
+  }
   
   .card__like-button:focus-visible {
     box-shadow: 2px 2px 0 0 var(--accent-color);
     outline: none;
-    transition: box-shadow 0.3s ease-out;
   }
   
   .card__like-button::after {
@@ -144,12 +148,12 @@
   
   .like-icon .core {
     fill: var(--bg-color);
-    transition: fill 0.3s linear;
+    transition: fill 0.3s 0.03s linear;
   }
   
   .like-icon .main-body {
     fill: var(--bg-color);
-    transition: fill 0.3 0.03 linear;
+    transition: fill 0.3 linear;
   }
   
   .like-icon:active .core {
