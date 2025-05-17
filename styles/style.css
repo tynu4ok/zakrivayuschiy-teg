@@ -34,12 +34,16 @@
 .header {
   margin-top: 100px;
   margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
 }
 
 .header__title {
   text-align: center;
   font-family: var(--accent-font-family);
   margin-block-end: 25px;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  text-transform: uppercase;
 }
 
 .theme-menu__list {
@@ -120,7 +124,6 @@
 
 .card__images__wrapper {
   position: relative;
-  border-block-start: 2px solid currentColor;
 }
 
 .card__tag {
@@ -164,6 +167,7 @@
   padding: 25px;
   font-size: 18px;
   line-height: calc(21 / 18);
+  border-block-start: 2px solid currentColor;
 }
 
 .button__card {
@@ -214,7 +218,6 @@
   justify-content: center;
   align-items: center;
   line-height: 12.6px;
-  overflow: hidden;
 }
 
 .button:focus {
